@@ -1,25 +1,37 @@
 {
   "users": [
-    { "id": "1",
-     "username": "johndoe",
-     "email": "johndoe@gmail.com",
-     "password": "password123"}
-   
-     ],
-  "products": [
-      {
-    "id": 1,
-    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    "price": 109.95,
-    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
-    "rating": {
-      "rate": 3.9,
-      "count": 120
+    {
+      "id": "1",
+      "username": "johndoe",
+      "email": "johndoe@gmail.com",
+      "password": "password123"
+    },
+    {
+      "id": "58a2",
+      "username": "zamannshaikh",
+      "email": "zamanshaikh2048@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "4fc3",
+      "username": "anamshaikh",
+      "email": "anam@gmail.com",
+      "password": "12345"
     }
-  }
   ],
-  "cart":[]
- 
+  "products": [
+    {
+      "id": "1",
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    }
+  ],
+  "cart": []
 }

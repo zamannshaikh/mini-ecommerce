@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 import axios from "./api/axiosconfig";
-import {asyncGetUser} from "./services/userService.jsx";
+// import {asyncGetUser} from "./services/userService.jsx";
 import { useDispatch, useSelector } from 'react-redux';
+import MainRoute from './routes/MainRoute.jsx';
+import Nav from './components/Nav.jsx';
 
 
 const App = () => {
@@ -20,13 +22,16 @@ const App = () => {
 
 
   useEffect(()=>{
-    getProducts();
-    dispatch(asyncGetUser());
+  
+    // dispatch(asyncGetUser());
   },[]); 
 
 
   return (
-    <div>App</div>
+    <div>
+      <Nav/>
+      <MainRoute />
+    </div>
   )
 }
 

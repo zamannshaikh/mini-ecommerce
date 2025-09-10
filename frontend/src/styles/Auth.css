@@ -1,0 +1,114 @@
+/* Container */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e3f2fd, #f5faff);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Card */
+.auth-card {
+  background: #fff;
+  padding: 40px 35px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Title */
+.auth-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0077ff;
+  margin-bottom: 5px;
+}
+
+/* Subtitle */
+.auth-subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Inputs */
+.auth-input {
+  padding: 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: border 0.3s ease;
+}
+
+.auth-input:focus {
+  border-color: #0077ff;
+  outline: none;
+}
+
+/* Button */
+.auth-btn {
+  background: #0077ff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-btn:hover {
+  background: #005fd4;
+}
+
+/* Footer */
+.auth-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+.auth-footer a {
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* space for the icon */
+}
+
+.password-wrapper i {
+  position: absolute;
+  right: 12px;
+  font-size: 18px;
+  color: #777;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.password-wrapper i:hover {
+  color: #0077ff;
+}
