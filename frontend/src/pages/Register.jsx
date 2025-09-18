@@ -5,6 +5,7 @@ import "../styles/Auth.css";
 import PasswordInput from "../components/PasswordInput";
 import { useDispatch } from "react-redux";
 import { asyncRegisterUser } from "../services/userService";
+import { nanoid } from "@reduxjs/toolkit";
 
 const Register = () => {
   const dispatch= useDispatch();
@@ -13,6 +14,8 @@ const Register = () => {
 
   const onSubmit = (data) => {
     // console.log("Register Data:", data);
+    data.id=nanoid();
+    data.isAdmin=false;
     reset();
     dispatch(asyncRegisterUser(data));
     navigate("/login");

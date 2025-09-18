@@ -4,26 +4,20 @@ import axios from "./api/axiosconfig";
 import { useDispatch, useSelector } from 'react-redux';
 import MainRoute from './routes/MainRoute.jsx';
 import Nav from './components/Nav.jsx';
+import { asyncCurrentUser } from './services/userService.jsx';
+import { asyncLoadProducts } from './services/productService.jsx';
 
 
 const App = () => {
   const dispatch = useDispatch();
-  const data= useSelector((state) => state);
-  const getProducts= async()=>{
-    try {
-      const res= await axios.get("/products");
-      console.log(res.data);
-      
-    } catch (error) {
-      console.error("Error fetching products:", error);
-      
-    }
-  }
 
+  
 
   useEffect(()=>{
   
     // dispatch(asyncGetUser());
+    dispatch(asyncCurrentUser());
+    dispatch(asyncLoadProducts());
   },[]); 
 
 

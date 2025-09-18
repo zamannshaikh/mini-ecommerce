@@ -4,19 +4,15 @@
       "id": "1",
       "username": "johndoe",
       "email": "johndoe@gmail.com",
-      "password": "password123"
+      "password": "password123",
+      "isAdmin": false
     },
     {
-      "id": "58a2",
+      "id": "cOGYR4GZpTR24PSwOO2tx",
       "username": "zamannshaikh",
       "email": "zamanshaikh2048@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": "4fc3",
-      "username": "anamshaikh",
-      "email": "anam@gmail.com",
-      "password": "12345"
+      "password": "12345",
+      "isAdmin": false
     }
   ],
   "products": [
@@ -26,11 +22,23 @@
       "price": 109.95,
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
       "category": "men's clothing",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
-      "rating": {
-        "rate": 3.9,
-        "count": 120
-      }
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+    },
+    {
+      "id": "_6Q2QYF_n71nIu7CkQPux",
+      "title": "testt product",
+      "price": "1000",
+      "description": "test description",
+      "category": "test ",
+      "image": "https://imgs.search.brave.com/ZUGMyYBP8CYDO40qglx_5dNa-VDjUBQosUAGOCVifLc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMDYv/NTQ1Lzc3Ny9zbWFs/bC92ZWdldGFibGVz/LXNhbGFkLXdpdGgt/ZHJlc3NpbmctaW5z/aWRlLXdoaXRlLWJv/d2wtb24tcnVzdGlj/LXRhYmxlLXBob3Rv/LmpwZwl"
+    },
+    {
+      "id": "QgjGJlt6ONTNU1yoV14CY",
+      "title": "Iphone 16",
+      "price": "80000",
+      "description": "kaskawjbfajbfjbwfjbwjfba",
+      "category": "Mobile",
+      "image": "https://www.macworld.com/article/2007943/iphone-16-release-date-specs-price-features.html"
     }
   ],
   "cart": []

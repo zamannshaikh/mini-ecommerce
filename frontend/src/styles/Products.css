@@ -1,0 +1,106 @@
+.products-container {
+  padding: 35px 0;
+  background: linear-gradient(135deg, #e3f2fd 0%, #f5faff 100%);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.products-section {
+  margin-bottom: 38px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  margin-left: 18px;
+  margin-bottom: 18px;
+}
+
+/* Horizontal Row */
+.products-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 26px;
+  padding: 0 12px 8px 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #0077ff #f0f4f8;
+}
+
+/* Product Mini Card */
+.product-mini-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,119,255,0.08);
+  min-width: 136px;
+  max-width: 160px;
+  padding: 14px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.22s;
+  border: 1px solid #e3f2fd;
+}
+
+.product-mini-card:hover {
+  box-shadow: 0 4px 16px rgba(0,119,255,0.10);
+  border-color: #0077ff;
+}
+
+/* Image */
+.mini-image-wrap {
+  width: 84px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.mini-product-img {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #f6f6fc;
+  box-shadow: 0 1px 4px rgba(0,119,255,0.07);
+}
+
+/* Details */
+.mini-details {
+  text-align: center;
+  width: 100%;
+  margin-top: 2px;
+}
+
+.mini-title {
+  font-size: 0.95rem;
+  color: #202124;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-offer {
+  font-size: 0.87rem;
+  color: #0077ff;
+  font-weight: 500;
+  display: block;
+}
+
+.no-products {
+  color: #999fb3;
+  font-size: 0.94rem;
+  padding: 20px;
+}
+
+@media (max-width: 700px) {
+  .products-section { margin-bottom: 21px; }
+  .section-title { font-size: 1rem; margin-left: 6px; }
+  .products-row { gap: 18px; }
+  .product-mini-card { min-width: 110px; max-width: 120px; padding: 9px 5px 7px 5px; }
+  .mini-image-wrap { width: 56px; height: 56px; }
+  .mini-product-img { width: 48px; height: 48px; }
+}

@@ -41,6 +41,7 @@ export const asyncCurrentUser=  (user)=> async(dispatch,getState)=>{
      const user = JSON.parse(localStorage.getItem("user"));
      if(user){
         dispatch(loadUser(user));
+        
      }
      else {
         console.log("user not logged in!!")
