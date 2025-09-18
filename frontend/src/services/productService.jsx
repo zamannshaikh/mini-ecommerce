@@ -15,7 +15,17 @@ export const asyncUpdateProduct= (id,product) =>async(dispatch,getState)=>{
         await axios.patch("/products/"+id,product);
         dispatch(asyncLoadProducts());
     } catch (error) {
-        console.error("Error creating product:", error);
+        console.error("Error updating product:", error);
+    }
+}
+
+
+export const asyncDeleteProduct= (id) =>async(dispatch,getState)=>{
+    try {
+        await axios.delete("/products/"+id);
+        dispatch(asyncLoadProducts());
+    } catch (error) {
+        console.error("Error deleting product:", error);
     }
 }
 

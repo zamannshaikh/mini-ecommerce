@@ -3,14 +3,15 @@ import { useForm } from "react-hook-form";
 import "../../styles/CreateProduct.css";
 import { nanoid } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
-import { asyncCreateProduct, asyncUpdateProduct } from "../../services/productService";
-import { useParams } from "react-router-dom";
+import { asyncCreateProduct, asyncDeleteProduct, asyncUpdateProduct } from "../../services/productService";
+import { useNavigate, useParams } from "react-router-dom";
 
 const UpdateProduct = () => {
     const { id } = useParams();
     const product = useSelector((state) =>
     state.productReducer.products.find((p) => String(p.id) === id)
   );
+  const navigate= useNavigate();
   const { register, handleSubmit, reset } = useForm({defaultValues:{
     title :product.title,
     price:product.price,
@@ -26,6 +27,10 @@ const UpdateProduct = () => {
 
     reset(); // Clears form after submit
   };
+  const deleteHandler=()=>{
+    dispatch(asyncDeleteProduct(id));
+    navigate("/products");
+  }
 
   return (
     <div className="product-container">
@@ -71,6 +76,9 @@ const UpdateProduct = () => {
 
           <button type="submit" className="product-btn">
             Update Product
+          </button>
+           <button onClick={deleteHandler} className="product-btn">
+            Delete Product
           </button>
         </form>
       </div>
