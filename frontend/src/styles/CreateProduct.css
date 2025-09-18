@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #e3f2fd, #f5faff);
+  background: #fafafa;
   font-family: "Segoe UI", sans-serif;
 }
 
@@ -19,7 +19,7 @@
 .product-title {
   font-size: 22px;
   font-weight: 600;
-  color: #0077ff;
+  color: #111111;
   text-align: center;
   margin-bottom: 6px;
 }
@@ -69,4 +69,29 @@
 
 .product-btn:hover {
   background: #005fd4;
+}
+
+
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111111; /* Changed from blue to premium black */
+}
+
+.add-to-cart-btn {
+  background: #111111; /* Black button */
+  color: #ffffff;
+}
+
+.add-to-cart-btn:hover {
+  background: #333333; /* Slightly lighter black for hover */
+}
+
+.products-header h1 {
+  color: #111111; /* Headings deep black */
+}
+
+.products-header p,
+.product-category {
+  color: #555555; /* Softer gray for secondary text */
 }

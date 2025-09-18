@@ -1,106 +1,132 @@
-.products-container {
-  padding: 35px 0;
-  background: linear-gradient(135deg, #e3f2fd 0%, #f5faff 100%);
-  font-family: 'Segoe UI', sans-serif;
+.products-page {
+  min-height: 100vh;
+  background: #fafafa;
+  padding: 40px 60px;
+  font-family: "Inter", sans-serif;
 }
 
-.products-section {
-  margin-bottom: 38px;
+.products-header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.section-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #222;
-  margin-left: 18px;
-  margin-bottom: 18px;
+.products-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
 }
 
-/* Horizontal Row */
-.products-row {
-  display: flex;
-  overflow-x: auto;
-  gap: 26px;
-  padding: 0 12px 8px 12px;
-  scrollbar-width: thin;
-  scrollbar-color: #0077ff #f0f4f8;
+.products-header p {
+  font-size: 15px;
+  color: #666;
+  margin-top: 6px;
 }
 
-/* Product Mini Card */
-.product-mini-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,119,255,0.08);
-  min-width: 136px;
-  max-width: 160px;
-  padding: 14px 10px 10px 10px;
+/* Grid Layout */
+.products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Product Card */
+.product-card-pro {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  transition: box-shadow 0.22s;
-  border: 1px solid #e3f2fd;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.product-mini-card:hover {
-  box-shadow: 0 4px 16px rgba(0,119,255,0.10);
-  border-color: #0077ff;
+.product-card-pro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Image */
-.mini-image-wrap {
-  width: 84px;
-  height: 84px;
+/* Product Image */
+.product-img-container {
+  width: 100%;
+  height: 240px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
+  background: #f5f5f5;
 }
 
-.mini-product-img {
-  width: 74px;
-  height: 74px;
+.product-img-container img {
+  max-width: 80%;
+  max-height: 80%;
   object-fit: contain;
-  border-radius: 4px;
-  background: #f6f6fc;
-  box-shadow: 0 1px 4px rgba(0,119,255,0.07);
+  transition: transform 0.3s ease;
 }
 
-/* Details */
-.mini-details {
-  text-align: center;
-  width: 100%;
-  margin-top: 2px;
+.product-card-pro:hover img {
+  transform: scale(1.05);
 }
 
-.mini-title {
-  font-size: 0.95rem;
-  color: #202124;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 3px;
-  white-space: nowrap;
+/* Product Details */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 15px 18px;
+}
+
+.product-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+  height: 38px;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.mini-offer {
-  font-size: 0.87rem;
-  color: #0077ff;
+.product-category {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Bottom Row (Price + Button) */
+.product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e88e5;
+}
+
+.add-to-cart-btn {
+  padding: 8px 14px;
+  background: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
   font-weight: 500;
-  display: block;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: #1565c0;
 }
 
 .no-products {
-  color: #999fb3;
-  font-size: 0.94rem;
-  padding: 20px;
+  text-align: center;
+  color: #555;
+  grid-column: 1 / -1;
+  font-size: 16px;
 }
-
-@media (max-width: 700px) {
-  .products-section { margin-bottom: 21px; }
-  .section-title { font-size: 1rem; margin-left: 6px; }
-  .products-row { gap: 18px; }
-  .product-mini-card { min-width: 110px; max-width: 120px; padding: 9px 5px 7px 5px; }
-  .mini-image-wrap { width: 56px; height: 56px; }
-  .mini-product-img { width: 48px; height: 48px; }
+.product-link {
+  text-decoration: none;
+  color: inherit;
 }

@@ -10,6 +10,16 @@ export const asyncCreateProduct= (product) =>async(dispatch,getState)=>{
 }
 
 
+export const asyncUpdateProduct= (id,product) =>async(dispatch,getState)=>{
+    try {
+        await axios.patch("/products/"+id,product);
+        dispatch(asyncLoadProducts());
+    } catch (error) {
+        console.error("Error creating product:", error);
+    }
+}
+
+
 export const asyncLoadProducts=()=> async(dispatch,getState)=>{
     try {
         const {data}= await axios.get("/products");
