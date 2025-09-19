@@ -13,6 +13,13 @@
       "email": "zamanshaikh2048@gmail.com",
       "password": "12345",
       "isAdmin": false
+    },
+    {
+      "id": "IKH4I6ry2s-YrPrR1hJF4",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin@123",
+      "isAdmin": true
     }
   ],
   "products": [

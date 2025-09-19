@@ -9,6 +9,7 @@ const ProductDetails = () => {
   const product = useSelector((state) =>
     state.productReducer.products.find((p) => String(p.id) === id)
   );
+  const user = useSelector((state) => state.userReducer.data);
 
   if (!product) {
     return <div className="product-not-found">Product not found</div>;
@@ -33,12 +34,15 @@ const ProductDetails = () => {
             <button className="btn-add-cart">Add to Cart</button>
 
             {/* ✅ Correct navigation on button click */}
-            <button
+            
+           {user && user.isAdmin ?<>
+             <button
               onClick={() => navigate(`/admin/update-product/${product.id}`)}
               className="btn-add-cart"
             >
               Update Product
-            </button>
+            </button></>
+            :<></>}
 
             <button className="btn-buy-now">Buy Now</button>
           </div>

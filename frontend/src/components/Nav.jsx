@@ -1,17 +1,25 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../styles/Nav.css"; // Assuming you have a CSS file for styling
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { asyncLogoutUser } from "../services/userService";
 
 const Nav = ({ user, cartCount }) => {
   const userLogin= useSelector((state)=> state.userReducer.data);
+ 
+  const dispatch= useDispatch();
+  const navigate=useNavigate();
+  const logoutHandler=()=>{
+    dispatch(asyncLogoutUser());
+    navigate("/");
+  }
 
   return (
     <nav className="navbar">
       {/* Left side */}
       <div className="nav-left">
         <span className="greeting">
-          {user ? `Hello, ${user}` : "Welcome, Guest"}
+          {userLogin ? `Hello, ${userLogin.username}` : "Welcome, Guest"}
         </span>
         <NavLink to="/" className="nav-link">
           Home
@@ -21,8 +29,8 @@ const Nav = ({ user, cartCount }) => {
           Products
         </NavLink>
 
-        {userLogin
-        ?<>
+        {userLogin && userLogin.isAdmin ?
+        <>
         <NavLink to="/admin/create-product" className="nav-link">
            Create Products
         </NavLink>
@@ -36,10 +44,24 @@ const Nav = ({ user, cartCount }) => {
 
       {/* Right side */}
       <div className="nav-right">
-        <NavLink to="/login" className="login-btn">
-          <i className="ri-login-circle-line"></i>
-          {userLogin ? " Logout" : " Login"}
-        </NavLink>
+
+
+        
+          {userLogin ? (
+    <button
+      className="login-btn"
+     onClick={logoutHandler}
+    >
+      <i className="ri-login-circle-line"></i> Logout
+    </button>
+  ) : (
+    <NavLink to="/login" className="login-btn">
+      <i className="ri-login-circle-line"></i> Login
+    </NavLink>
+  )}
+
+
+
         <NavLink to="/cart" className="cart-icon">
           <i className="ri-shopping-cart-line"></i>
           {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
