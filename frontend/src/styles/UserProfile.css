@@ -1,0 +1,111 @@
+.profile-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.profile-heading {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-row label {
+  font-weight: 500;
+  color: #555;
+  min-width: 90px;
+}
+
+.profile-row span {
+  color: #333;
+}
+
+.profile-row input {
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 6px;
+  flex: 1;
+  margin-left: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.profile-row input:focus {
+  border-color: #222;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.edit-btn,
+.save-btn,
+.cancel-btn {
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background: #222;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #000;
+}
+
+.save-btn {
+  background: #28a745;
+  color: white;
+}
+
+.Delete-btn {
+  background: #f81010;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.save-btn:hover {
+  background: #1e7e34;
+  color: white;
+}
+.Delete-btn:hover {
+    background: #cc0808;
+  color: white;
+}
+
+
+.cancel-btn {
+  background: #f0f0f0;
+  color: #444;
+}
+
+.cancel-btn:hover {
+  background: #ddd;
+}

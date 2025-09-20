@@ -130,3 +130,20 @@
   text-decoration: none;
   color: inherit;
 }
+
+.add-to-cart-btn {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: #333;
+  transform: scale(1.05);
+}

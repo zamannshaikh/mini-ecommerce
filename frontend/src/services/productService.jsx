@@ -33,7 +33,7 @@ export const asyncDeleteProduct= (id) =>async(dispatch,getState)=>{
 export const asyncLoadProducts=()=> async(dispatch,getState)=>{
     try {
         const {data}= await axios.get("/products");
-        console.log( " from load product",data);
+       
         dispatch(loadProducts(data));
     } catch (error) {
         console.error("Error fetching products:", error);

@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../styles/Auth.css";
 import PasswordInput from "../components/PasswordInput"; // Import the PasswordInput component
 import { asyncLoginUser } from "../services/userService";
@@ -9,10 +9,13 @@ import { useDispatch } from "react-redux";
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
   const dispatch = useDispatch();
+  const navigate=useNavigate();
 
   const onSubmit = (data) => {
     console.log("Login Data:", data.username ,data.password);
     dispatch(asyncLoginUser(data));
+    navigate("/products");
+    
     reset();
   };
 

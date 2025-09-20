@@ -5,21 +5,24 @@
       "username": "johndoe",
       "email": "johndoe@gmail.com",
       "password": "password123",
-      "isAdmin": false
-    },
-    {
-      "id": "cOGYR4GZpTR24PSwOO2tx",
-      "username": "zamannshaikh",
-      "email": "zamanshaikh2048@gmail.com",
-      "password": "12345",
-      "isAdmin": false
+      "isAdmin": false,
+      "cart": []
     },
     {
       "id": "IKH4I6ry2s-YrPrR1hJF4",
       "username": "admin",
       "email": "admin@gmail.com",
       "password": "admin@123",
-      "isAdmin": true
+      "isAdmin": true,
+      "cart": []
+    },
+    {
+      "id": "JamDnv8_jY_uW4xVL05fc",
+      "username": "zamannshaikh",
+      "email": "zamanshaikh2048@gmail.com",
+      "password": "12345",
+      "isAdmin": false,
+      "cart": []
     }
   ],
   "products": [

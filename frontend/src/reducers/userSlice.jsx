@@ -13,8 +13,10 @@ const userSlice= createSlice({
         }, 
         removeUser:(state,action)=>{
             state.data=null;
-        }
+        },
+        
+     
     }
 });
-export const {loadUser,removeUser} = userSlice.actions;
+export const {loadUser,removeUser,} = userSlice.actions;
 export default userSlice.reducer;
