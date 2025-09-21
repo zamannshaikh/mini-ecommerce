@@ -13,8 +13,7 @@ const Nav = () => {
     dispatch(asyncLogoutUser());
     navigate("/");
   }
-  console.log("Navbar userLogin:", userLogin);
-console.log("Type of isAdmin:", typeof userLogin?.isAdmin, "Value:", userLogin?.isAdmin);
+
 
 
 
